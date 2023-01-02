@@ -12,10 +12,11 @@ import java.util.Arrays;
  */
 public class HDFS {
 
-    public static String FileName1 = "billboardHot100_1999-2019.csv";
-    public static String FileName2 = "grammyAlbums_199-2019.csv";
-    public static String FileName3 = "grammySongs_1999-2019.csv";
-    public static String FileName4 = "riaaSingleCerts_1999-2019.csv";
+    public static String FileName1 = "Q1.csv";
+    public static String FileName2 = "Q2.csv";
+    public static String FileName3 = "Q3.csv";
+    public static String FileName4 = "Q4.csv";
+    public static String FileName5 = "Q5.csv";
 
     public static void main(String[] args) throws IOException {
         //上传文件
@@ -30,7 +31,7 @@ public class HDFS {
         FileSystem fileSystem = FileSystem.get(configuration);
 
         //将文件上传至HDFS
-        Path srcPath = new Path("D:\\桌面\\学习\\大数据\\实践\\BillboardFromLast20\\" +FileName4);
+        Path srcPath = new Path("D:\\桌面\\学习\\大数据\\实践\\Q\\" +FileName5);
         Path destPath = new Path("/yjx/");
 
         fileSystem.copyFromLocalFile(srcPath, destPath);
