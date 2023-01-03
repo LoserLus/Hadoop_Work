@@ -25,6 +25,7 @@ public class Q5Reducer extends Reducer<Text, IntWritable, Q5, NullWritable> {
                 min = temp;
         }
 
+        System.out.println(key.toString());
         //对year:name:artist进行拆分
         String[] pf = key.toString().split(":");
 

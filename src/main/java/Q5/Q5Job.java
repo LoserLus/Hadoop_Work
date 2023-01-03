@@ -14,7 +14,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
- * 1.统计1999-2019年排行榜中主要音乐风格的变化
+ * 5.统计每一年的歌曲首发与上榜时间差最小值
  */
 public class Q5Job {
     private static String driverClass = "com.mysql.cj.jdbc.Driver";
