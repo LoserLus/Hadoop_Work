@@ -24,7 +24,7 @@ public class Q5Job {
 
     //表信息
     private static String tableName = "Q5";
-    private static String[] fields = {"id", "year", "name", "artist","mindelta"};
+    private static String[] fields = {"id", "year", "name", "artist","maxdelta"};
 
 
     public static void main(String[] args) throws Exception {

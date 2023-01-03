@@ -16,18 +16,18 @@ public class Q5 implements Writable, DBWritable {
     private Integer year;
     private String name;
     private String artist;
-    private Integer mindelta;
+    private Integer maxdelta;
 
 
     public Q5() {
     }
 
-    public Q5(Integer id, Integer year, String name, String artist, Integer mindelta) {
+    public Q5(Integer id, Integer year, String name, String artist, Integer maxdelta) {
         this.id = id;
         this.year = year;
         this.name = name;
         this.artist = artist;
-        this.mindelta = mindelta;
+        this.maxdelta = maxdelta;
     }
 
     public Integer getId() {
@@ -62,12 +62,12 @@ public class Q5 implements Writable, DBWritable {
         this.artist = artist;
     }
 
-    public Integer getMindelta() {
-        return mindelta;
+    public Integer getMaxdelta() {
+        return maxdelta;
     }
 
-    public void setMindelta(Integer mindelta) {
-        this.mindelta = mindelta;
+    public void setMaxdelta(Integer maxdelta) {
+        this.maxdelta = maxdelta;
     }
 
     @Override
@@ -77,7 +77,7 @@ public class Q5 implements Writable, DBWritable {
                 ", year=" + year +
                 ", genre='" + name + '\'' +
                 ", artist='" + artist + '\'' +
-                ", mindelta=" + mindelta +
+                ", maxdelta=" + maxdelta +
                 '}';
     }
 
@@ -88,7 +88,7 @@ public class Q5 implements Writable, DBWritable {
         dataOutput.writeInt(this.year);
         dataOutput.writeUTF(this.name);
         dataOutput.writeUTF(this.artist);
-        dataOutput.writeInt(this.mindelta);
+        dataOutput.writeInt(this.maxdelta);
     }
 
     @Override
@@ -97,7 +97,7 @@ public class Q5 implements Writable, DBWritable {
         this.year = dataInput.readInt();
         this.name = dataInput.readUTF();
         this.artist = dataInput.readUTF();
-        this.mindelta = dataInput.readInt();
+        this.maxdelta = dataInput.readInt();
     }
 
     @Override
@@ -106,7 +106,7 @@ public class Q5 implements Writable, DBWritable {
         preparedStatement.setInt(2, this.year);
         preparedStatement.setString(3, this.name);
         preparedStatement.setString(4, this.artist);
-        preparedStatement.setInt(5, this.mindelta);
+        preparedStatement.setInt(5, this.maxdelta);
     }
 
     @Override
@@ -115,6 +115,6 @@ public class Q5 implements Writable, DBWritable {
         this.year = resultSet.getInt(2);
         this.name = resultSet.getString(3);
         this.name = resultSet.getString(4);
-        this.mindelta = resultSet.getInt(5);
+        this.maxdelta = resultSet.getInt(5);
     }
 }
